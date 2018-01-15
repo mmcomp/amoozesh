@@ -1,0 +1,38 @@
+{
+    "plugins": [
+        "mobi.monaca.plugins.Monaca@3.1.0",
+        "mobi.monaca.plugins.BarcodeScanner@1.0.3"
+    ],
+    "framework_version": "3.5",
+    "xcode_version": "7",
+    "cordova_version": "6.2",
+    "plugin_settings": {
+        "mobi.monaca.plugins.BarcodeScanner": {
+            "variables": []
+        }
+    },
+    "external_plugins": [
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-plugin-device-motion@1.2.1",
+        "cordova-plugin-camera@2.2.0",
+        "cordova-plugin-device-orientation@1.0.3",
+        "cordova-plugin-geolocation@2.2.0",
+        "cordova-plugin-network-information@1.2.1",
+        "cordova-plugin-vibration@2.1.1",
+        "cordova-plugin-contacts@2.1.0",
+        "cordova-plugin-splashscreen@3.2.2",
+        "cordova-plugin-device@1.1.2",
+        "cordova-plugin-file@4.2.0",
+        "cordova-custom-config@2.0.3"
+    ],
+    "title-ja": "",
+    "title-en": "Amoozesh",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+        "android",
+        "ios"
+    ],
+    "name": "generated-1516001387-581189a6013eb0834d5d16c9"
+}

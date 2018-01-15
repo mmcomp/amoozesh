@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/file.js"></script>
+    <script src="js/barcode.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        سامانه آموزش
+    </div>
+    <div class="page" id="page-main">
+      <h3 class="title">
+          آموزش و بهسازی منابع انسانی
+      </h3>
+      <br />
+      <a class="button--large" href="javascript:scanBarcode()">
+          ثبت بارکد
+      </a>
+      <br />
+      <div class="panel"></div>
+    </div>
+    <div class="page" id="page-nazar-class">
+      <h3 class="title">
+          فرم نظرسنجی دوره
+      </h3>
+      <div class="panel">
+        <div class="question">
+          ۱ - تناسب محتوی درس با عنوان دوره
+          <br />
+          <select class="answer nazar-class" id="nazar-class-1">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۲ - کاربردی بودن مطلب
+          <br />
+          <select class="answer nazar-class" id="nazar-class-2">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۳ - بار علمی موضوعات ارائه شده
+          <br />
+          <select class="answer nazar-class" id="nazar-class-3">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۴ - توانایی موضوع ارائه شده در ایجاد انگیزه
+          <br />
+          <select class="answer nazar-class" id="nazar-class-4">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۵ - توانایی در برقراری ارتباط موثر
+          <br />
+          <select class="answer nazar-class" id="nazar-class-5">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۶ - قدرت بیان مدرس در ارائه مطالب
+          <br />
+          <select class="answer nazar-class" id="nazar-class-6">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۷ - ایجاد آمادگی لازم جهت ورود به موضوع اصلی
+          <br />
+          <select class="answer nazar-class" id="nazar-class-7">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+
+        <div class="question">
+          ۸ - ارائه توضیحات روشن و مصالهای مناسب در ارتباط با موضوع
+          <br />
+          <select class="answer nazar-class" id="nazar-class-8">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۹ - امکان بحث و مشارکت دانشجویان
+          <br />
+          <select class="answer nazar-class" id="nazar-class-9">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۱۰ - وجود چارچوب منطقی در ارائه موضوع
+          <br />
+          <select class="answer nazar-class" id="nazar-class-10">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۱۱ - استفاده از وسائل کمک آموزشی
+          <br />
+          <select class="answer nazar-class" id="nazar-class-11">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۱۲ - نحوه پاسخگویی به سوالات
+          <br />
+          <select class="answer nazar-class" id="nazar-class-12">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۱۳ - چنانچه انتقاد یا پیشنهاد خاصی دارید ذکر کنید.
+          <textarea class="answer-text nazar-class" id="nazar-class-13"></textarea>
+        </div>
+      </div>
+      <div>
+        <br />
+        <br /> 
+        <br />
+      </div>
+    </div>
+    <div class="page" id="page-nazar-ostad">
+      <h3 class="title">
+          فرم نظرسنجی استاد
+      </h3>
+      <div class="panel">        
+        <div class="question">
+          ۱ - تناسب مطالب ارائه شده با نیاز شما
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-1">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۲ - شیوه اداره جلسات
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-2">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۳ - اطلاع رسانی از زمان و نحوه برگزاری
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-3">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۴ - نحوه اجرای برنامه با توجه به برنامه از پیش تعیین شده
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-4">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۵ - محل برگزاری جلسه
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-5">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۶ - مدت زمان برگزاری جلسه
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-6">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۷ - زمان برگزاری جلسه
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-7">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+
+        <div class="question">
+          ۸ - امکان بحث و مشارکت دانشجویان
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-8">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۹ - نحوه و نوع پذیرایی
+          <br />
+          <select class="answer nazar-ostad" id="nazar-ostad-9">
+            <option value=""></option>
+            <option value="5">بسیار خوب</option>
+            <option value="4">خوب</option>
+            <option value="3">متوسط</option>
+            <option value="2">ضعیف</option>
+            <option value="1">بسیار ضعیف</option>
+          </select>
+        </div>
+        <div class="question">
+          ۱۰ - به نظر شما چه موضوعاتی (با عنوان دوره ) دارای ارتباط بیشتری بودند؟
+          <br />
+          <textarea class="answer-text nazar-ostad" id="nazar-ostad-10"></textarea>
+        </div>
+        <div class="question">
+          ۱۱ - نقات قوت مطالب ارائه شده را توضیح دهید.
+          <br />
+          <textarea class="answer-text nazar-ostad" id="nazar-ostad-11"></textarea>
+        </div>
+        <div class="question">
+          ۱۲ - نقاط ضعف مطالب ارائه شده رو بیان فرمایید.
+          <br />
+          <textarea class="answer-text nazar-ostad" id="nazar-ostad-12"></textarea>
+        </div>
+        <div class="question">
+          ۱۳ - چنانچه انتقاد یا پیشنهاد خاصی دارید ذکر کنید.
+          <br />
+          <textarea class="answer-text nazar-ostad" id="nazar-ostad-13"></textarea>
+        </div>
+      </div>
+      <div>
+        <br />
+        <br /> 
+        <br />
+      </div>
+    </div>
+    <div class="page" id="page-docs">
+      <h3 class="title">
+          مستندات مرتبط با دوره
+      </h3>
+      <div class="panel">  
+        <img class="icon" style="float:right;padding: 4px 4px;" src="img/Docs-icon.png" alt="فرم نظرسنجی" />
+        <a class="button" href="javascript:malert('ارتباط با سرور برقرار نیست');">
+              برنامه زمانبندی این دوره              
+        </a>
+      </div>
+    </div>
+    <div class="page" id="page-upload">
+      <h3 class="title">
+          ارسال اطلاعات جمع آوری شده به مرکز
+      </h3>
+      <div class="panel">  
+        <a class="button" href="javascript:malert('ارتباط با سرور برقرار نیست');">
+              ارسال
+        </a>
+        <br/>
+        <a class="button" href="javascript:clearData();">
+              پاک کردن اطلاعات
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+        	<td class="submenu icon-selected" id="main"><img class="icon" src="img/main.png" alt="فرم نظرسنجی" /></td>
+          <td class="submenu" id="nazar-class"><img class="icon" src="img/form-icon.png" alt="فرم نظرسنجی" /></td>
+          <td class="submenu" id="nazar-ostad"><img class="icon" src="img/ostad.jpg" alt="فرم نظرسنجی" /></td>
+          <td class="submenu" id="docs"><img class="icon" src="img/Docs-icon.png" alt="فرم نظرسنجی" /></td>
+          <td class="submenu" id="upload"><img class="icon" src="img/upload.jpg" alt="فرم نظرسنجی" /></td>
+      	</tr>
+      </table>
+    </div>
+</body>
+</html>
